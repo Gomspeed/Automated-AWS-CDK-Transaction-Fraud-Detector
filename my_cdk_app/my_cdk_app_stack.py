@@ -78,7 +78,7 @@ class MyCdkAppStack(Stack):
                 conditions={
                     "StringNotEquals": {
                         "aws:PrincipalArn": [
-                            "arn:aws:iam::236823122578:user/Theadmin",  # Replace with your actual account ID
+                            "arn:aws:iam::123456789:user/Theadmin",  # Replace with your actual account ID
                             lambda_function.role.role_arn
                         ]
                     }
