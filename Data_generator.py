@@ -77,7 +77,7 @@ def upload_to_s3(bucket_name, json_data):
 
 def main():
     # Replace with your bucket name
-    bucket_name = "ridwangomezybucket"
+    bucket_name = "bucketname"
     
     print("Starting continuous transaction generation. Press Ctrl+C to stop.")
     
