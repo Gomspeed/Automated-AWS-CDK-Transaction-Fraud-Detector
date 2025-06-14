@@ -38,7 +38,7 @@ class MyCdkAppStack(Stack):
         # S3 Bucket
         bucket = s3.Bucket(
             self, "JsonAnalyzerBucket",
-            bucket_name='ridwangomezybucket',
+            bucket_name='bucketname',
             removal_policy=RemovalPolicy.DESTROY,
             auto_delete_objects=True
         )
@@ -48,7 +48,7 @@ class MyCdkAppStack(Stack):
         # SNS Topic
         topic = sns.Topic(self, "JsonAnalyzerTopic")
         topic.add_subscription(
-            subscriptions.EmailSubscription("ridwangomez98@gmail.com")
+            subscriptions.EmailSubscription("youremail@email.com")
         )
 
         # Lambda Function
@@ -78,7 +78,7 @@ class MyCdkAppStack(Stack):
                 conditions={
                     "StringNotEquals": {
                         "aws:PrincipalArn": [
-                            "arn:aws:iam::123456789:user/Theadmin",  # Replace with your actual account ID
+                            "arn:aws:iam::123456789:user/yourusername",  # Replace with your actual account ID
                             lambda_function.role.role_arn
                         ]
                     }
